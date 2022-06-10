@@ -12,6 +12,10 @@ header {
     width: 100%;
 }
 
+body{
+    background: #fff;
+    transition: linear 2s;
+}
 
 .bg-dark{
     display: flex;
@@ -210,7 +214,7 @@ footer h1{
   }
 
 
-@media (max-width: 667px)
+@media (max-width: 360px)
 {
   .conteudo-principal
    {
