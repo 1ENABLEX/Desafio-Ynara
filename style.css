@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Blaka&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #212529;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.bg-dark{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.links {
+    width: 100%;
+}
+
+
+
+.links button {
+    border: none;
+    background: transparent;
+}
+
+.dark-mode {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition: linear 2s;
+}
+
+header h5 {
+    font-family: 'Blaka', cursive;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    margin-left: 16px;
+    font-size: 28px;
+    font-family: 'Blaka', cursive;
+}
+
+/* DARK MODE BTN*/
+.toggle > input {
+    display: none;
+}
+
+.toggle > label {
+    position: relative;
+    display: block;
+    height: 20px;
+    width: 44px;
+    background: #898989;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.toggle > label:after {
+    position: absolute;
+    left: -2px;
+    top: -3px;
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 100px;
+    background: #fff;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+    content: '';
+    transition: all 0.3s ease;
+}
+.toggle > label:active:after {
+    transform: scale(1.15, 0.85);
+}
+.toggle > input:checked ~ label {
+    background: #000000;
+}
+.toggle > input:checked ~ label:after {
+    left: 20px;
+    background: #ffffff;
+}
+
+
+/*CARROSEL*/
+
+#carrosel{
+    display: flex;
+    justify-content: center;
+    max-width: 960px;
+    margin: 0 auto;
+
+}
+
+.conteudo-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: black 2px solid;
+    margin-top: 3em;
+}
+
+
+.textos-right {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-size: 32px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.fotoprincipal {
+    height: 21.875em;
+    border-radius: 5px;
+}
+
+
+.conteudo-sobre {
+    display: none;
+    margin-top: 3em;
+    border: 2px black solid;
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.dark-border{
+    border: 2px white solid;
+}
+
+body {
+    background-color: #eee;
+}
+
+.toggle{
+    padding: 5px;
+}
+
+.show{
+    width: 100%;
+}
+
+
+/* FORMAS DE CONTATO */
+
+.forma-contato{
+    display: none;
+}
+
+.conteudo-contato{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.hidden {
+    margin: 0 auto;
+    visibility: hidden;
+}
+
+.itensnav {
+    background: white;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.conteudo-contato img {
+    width: 64px;
+    height: 64px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer h1{
+    
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 7px;
+    color: #fff;
+    cursor: pointer;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff, 
+                 0 0 40px #fff;
+  }
+  h1 span{
+    transition: .5s linear
+  }
+  h1:hover span:nth-child(1){
+    margin-right: 5px
+  }
+  h1:hover span:nth-child(1):after{
+    content: "I'M";
+  }
+  h1:hover span:nth-child(2){
+    margin-left: 30px
+  }
+
+
+@media (max-width: 667px)
+{
+  .conteudo-principal
+   {
+    flex-direction: column;
+   }
+   header a {
+       font-size: 16px;
+   }
+   .bg-dark {
+       padding: 0;
+   }
+
+   .conteudo-sobre {
+       font-size: 16px;
+   }
+   .show{
+    display: flex;
+    flex-direction: row;
+    }
+    footer h1 {
+        font-size: 32px
+    }
+}
