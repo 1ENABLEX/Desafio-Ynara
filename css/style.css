@@ -103,6 +103,16 @@ header a {
 
 }
 
+.carousel-caption h5{
+    color: rgb(255, 255, 255);
+    text-shadow: #000000 4px 2px 2px;
+}
+
+.carousel-caption p{
+    color: rgb(255, 255, 255);
+    text-shadow: #000000 4px 2px 2px;
+}
+
 .conteudo-principal{
     display: flex;
     justify-content: center;
@@ -124,6 +134,12 @@ header a {
 .fotoprincipal {
     height: 21.875em;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+#Foto-Human {
+    display: none;
+    cursor: pointer;
 }
 
 

@@ -66,7 +66,8 @@
             </section>
 
             <section class="textos-left">
-                <img src="./assets/ena.png" alt="" class=" fotoprincipal animate__animated animate__fadeIn animate__delay-1s">
+                <img id="Foto-Anime" src="./assets/ena.png" alt="" class=" fotoprincipal animate__animated animate__fadeIn">
+                <img id="Foto-Human" src="./assets/ena2" alt="" class=" fotoprincipal animate__animated animate__fadeIn">
             </section>
         </div>
 
@@ -179,6 +180,16 @@
             $("#contato").click(function(){
                 $(".forma-contato").slideToggle("slow", function(){
                     
+                });
+            });
+            $("#Foto-Anime").click(function () {
+                $("#Foto-Human").slideToggle("fast", function (){
+                    $("#Foto-Anime").slideToggle(); 
+                });
+            });
+            $("#Foto-Human").click(function () {
+                $("#Foto-Anime").slideToggle("fast", function (){
+                    $("#Foto-Human").slideToggle(); 
                 });
             });
         });
